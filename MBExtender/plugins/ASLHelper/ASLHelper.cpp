@@ -23,7 +23,7 @@
 //-----------------------------------------------------------------------------
 
 #include <MBExtender/MBExtender.h>
-#include <string.h>
+#include <TorqueLib/console/console.h>
 
 MBX_MODULE(ASLHelper);
 
@@ -45,3 +45,24 @@ int ASLHelper::state = 0;
 int ASLHelper::levelid = 0;
 int ASLHelper::leveltime = 0;
 int ASLHelper::totaltime = 0;
+
+MBX_CONSOLE_FUNCTION(ASL_setState, void, 2, 2, "ASL_setState(state)")
+{
+    ASLHelper::state = atoi(argv[1]);
+}
+
+MBX_CONSOLE_FUNCTION(ASL_setLevelId, void, 2, 2, "ASL_setLevelId(levelid)")
+{
+    ASLHelper::levelid = atoi(argv[1]);
+}
+
+MBX_CONSOLE_FUNCTION(ASL_setLevelTime, void, 2, 2, "ASL_setLevelTime(leveltime)")
+{
+    ASLHelper::leveltime = atoi(argv[1]);
+}
+
+MBX_CONSOLE_FUNCTION(ASL_setTotalTime, void, 2, 2, "ASL_setTotalTime(totaltime)")
+{
+    ASLHelper::totaltime = atoi(argv[1]);
+}
+
