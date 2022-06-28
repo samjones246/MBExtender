@@ -62,3 +62,4 @@ MBExtender/external/curl/docs/
 MBExtender/plugins/Rewind
 *.pch
 .vs
+.vscode
